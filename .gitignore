@@ -1,6 +1,6 @@
 # --- Big datasets ---
 datasets/*
-!datasets/sample/
+!datasets/samples/
 
 # --- AWS keys and credentials ---
 src/main/resources/aws_credentials.txt
