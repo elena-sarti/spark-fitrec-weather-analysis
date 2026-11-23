@@ -1,1 +1,50 @@
-datasets/
+# --- Big datasets ---
+datasets/*
+!datasets/sample/
+
+# --- AWS keys and credentials ---
+src/main/resources/aws_credentials.txt
+aws/credentials
+aws/keys/*
+*.ppk
+*.pem
+.env
+
+# --- Output Spark / Hive / Derby ---
+output/
+metastore_db/
+derby.log
+spark-warehouse/
+
+# --- Build Scala / Java / Gradle ---
+build/
+**/build/
+.gradle/
+.gradletasknamecache
+*.class
+*.jar
+!gradle/wrapper/gradle-wrapper.jar
+*.log
+hs_err_pid*
+src/main/resources/META-INF
+
+# --- Python / Jupyter ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+**/.ipynb_checkpoints/*
+
+# --- VS Code / Scala Metals ---
+.vscode/
+.metals/
+.bloop/
+
+# --- OS (Windows / Linux) ---
+Thumbs.db
+[Dd]esktop.ini
+.DS_Store
+*~
+*.swp
+*.tmp
+

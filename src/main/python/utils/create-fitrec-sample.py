@@ -53,17 +53,3 @@ with open("./datasets/stations.csv", "r", encoding="utf-8") as fst:
 
 with open("./datasets/sample_stations.csv", "w", newline="", encoding="utf-8") as fout:
     csv.writer(fout).writerows(sample_stations)
-
-meteo_bytes = 0
-MAX_METEO_BYTES = 2_500_000
-sample_meteo = []
-with open("./datasets/meteo_hourly.csv", "r", encoding="utf-8") as fm:
-    for row in csv.reader(fm):
-        if row and row[0] in sample_station_ids:
-            sample_meteo.append(row)
-            meteo_bytes += sum(len(c) + 1 for c in row)
-            if meteo_bytes >= MAX_METEO_BYTES:
-                break
-
-with open("./datasets/sample_meteo_hourly.csv", "w", newline="", encoding="utf-8") as fout:
-    csv.writer(fout).writerows(sample_meteo)
